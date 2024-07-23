@@ -1,0 +1,44 @@
+.bt {
+    padding: 10px 20px;
+    background-color:rgba(0, 106, 255, 0.967);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .bt:hover {
+    background-color: rgb(7, 77, 174);
+  }
+  
+  .bt:active {
+    background-color:rgba(0, 106, 255, 0.582);
+  }
+  .icon-wrapper {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .icon i {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .icon a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .icon a:hover {
+    text-decoration: underline;
+  }
+  
+  

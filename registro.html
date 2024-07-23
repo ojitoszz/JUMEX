@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <title>Login</title>
+    <style> 
+        body {
+            /* Eliminamos la propiedad background-image */
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        /* Añadimos un estilo para el video */
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Coloca el video detrás de los demás contenidos */
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 10px 24px 138px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            text-align: center; /* Alineación a la izquierda */
+            position: relative; /* Añadimos posición relativa para manejar el z-index de los contenidos */
+            z-index: 1; /* Aseguramos que los contenidos estén sobre el video */
+            margin-left: 20px; /* Ajuste de margen para centrar mejor en la pantalla */
+        }
+
+        .login-container h2 {
+            color: #333;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"],
+        .login-container button {
+            margin-top: 10px;
+            width: calc(100% - 20px); /* Ajuste de ancho para tener espacio para el margen izquierdo */
+            margin-left: 20px; /* Margen izquierdo para alinear con los labels */
+        }
+
+        .login-container label {
+            display: block;
+            text-align: left;
+            margin-left: 20px; /* Margen izquierdo para alinear con los inputs */
+            margin-bottom: 5px; /* Espacio entre los labels */
+        }
+    </style>
+</head>
+   <!-- Video de fondo -->
+   <video autoplay muted loop>
+    <source src="IMG/video.mp4" type="video/mp4">
+    Tu navegador no soporta videos HTML5.
+</video>
+<div class="login-container">
+    <img src="IMG/logoju.png" alt="Logo" class="mx-auto mb-5" style="max-width: 150px;">
+    <h2 class="text-3xl font-bold mb-4">Registrate</h2>
+
+        <form action="../Jumex/php/registro.php" method="POST">
+            <div class="mb-3">
+                <label for="username" class="block mb-2 text-sm font-medium text-gray-900">Correo</label>
+                <input type="text" id="username" name="username" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Ingresa un correo" required>
+            </div>
+           
+            <div class="mb-3">
+                <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Contraseña</label>
+                <input type="password" id="password" name="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"  placeholder="Ingresa una contraseña" required>
+            </div>
+            <div class="flex items-center justify-between mb-3">
+                <div class="flex items-start">
+                    <input id="agree" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300" required>
+                    <label for="agree" class="ml-2 text-sm font-medium text-gray-900">Estoy de acuerdo con los términos y condiciones</label>
+                </div>
+            </div>
+            <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Registrarse</button>
+            <p class="mt-3 text-sm text-gray-500">¿Ya tienes una cuenta? <a href="../Jumex/index.html" class="text-blue-700 hover:underline">Inicia sesión</a></p>
+        </form>
+    </div>
+</body>
+
+</html>
